@@ -4,7 +4,7 @@ import { useAuth } from '../../context/AuthoContext';
 
 const Navbar = () => {
   const { user, logout } = useAuth();
-
+ console.log(user)
   return (
     <nav className="bg-blue-600 text-white shadow-lg">
       <div className="max-w-7xl mx-auto px-4">
@@ -16,7 +16,7 @@ const Navbar = () => {
           <div className="flex items-center space-x-4">
             {user ? (
               <>
-                <span>Welcome, {user.username}</span>
+                <span>Welcome {user.username.charAt(0).toUpperCase()}</span>
                 <Link
                   to="/profile"
                   className="hover:bg-blue-700 px-3 py-2 rounded"
