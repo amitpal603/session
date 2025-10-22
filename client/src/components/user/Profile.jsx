@@ -10,7 +10,7 @@ const Profile = () => {
   useEffect(() => {
     fetchProfile();
   }, []);
-
+  
   const fetchProfile = async () => {
     try {
       const response = await userAPI.getProfile();
