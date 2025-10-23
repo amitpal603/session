@@ -64,6 +64,7 @@ const userController = {
 
   updatePreferences: async (req, res) => {
     try {
+      
       const { theme, language, notifications } = req.body;
       
       const user = await User.findByIdAndUpdate(
